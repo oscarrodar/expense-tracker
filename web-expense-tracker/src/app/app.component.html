@@ -1,0 +1,13 @@
+<header>
+  <h1>Web Expense Tracker</h1>
+  <app-auth-status></app-auth-status>
+</header>
+
+<main>
+  <app-login *ngIf="!(isAuthenticated$ | async)"></app-login>
+  <router-outlet></router-outlet>
+</main>
+
+<footer>
+  <p>© 2024 Expense Tracker</p>
+</footer>
